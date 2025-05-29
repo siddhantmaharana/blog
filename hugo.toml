@@ -11,7 +11,7 @@ tag = 'tags'
 
 [params]
 # Meta description
-description = "A Tech Blog"
+description = "Sid's personal blog"
 
 # Appearance settings
 theme = 'auto'
@@ -19,9 +19,9 @@ colorPalette = 'default'
 hideHeader = false
 
 # Intro on main page, content is markdown
-homeIntroTitle = 'Hi!'
+homeIntroTitle = 'Hey there! I'm Sid.'
 homeIntroContent = """
-https://siddhantmaharana.github.io/
+Atlantan with restless feet: happiest on trails, coffee shops, and anywhere outdoors
 """
 
 # Collection to display on home
@@ -42,15 +42,12 @@ home = "Home"
 # Social icons
 [[params.social]]
 name = "linkedin"
-url = "https://www.linkedin.com/in/user/"
+url = "https://www.linkedin.com/in/siddhantmaharana/"
 
-[[params.social]]
-name = "medium"
-url = "https://medium.com/@user"
 
 [[params.social]]
 name = "github"
-url = "https://github.com/user"
+url = "https://github.com/siddhantmaharana"
 
 # Main menu pages
 [[params.menu]]
