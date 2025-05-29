@@ -3,8 +3,6 @@ date = '2022-04-12T16:24:23-04:00'
 title = 'Notes on Inferential Stats'
 +++
 
-# Notes on Inferential Stats
-
 I keep coming back to these statistical concepts in my work, so I figured I'd write down the key ideas that actually matter in practice. This isn't meant to be comprehensive - just the stuff I find myself explaining over and over.
 
 ## Why Statistics Matters (Beyond the Math)
