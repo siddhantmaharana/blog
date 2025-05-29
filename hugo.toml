@@ -1,6 +1,6 @@
 baseURL = 'https://siddhantmaharana.github.io/'
 languageCode = 'en-us'
-title = "Sid's Blog"
+title = "Sid's Notes"
 theme = "typo"
 
 # Google analytics code
@@ -11,7 +11,7 @@ tag = 'tags'
 
 [params]
 # Meta description
-description = "Sid's personal blog"
+description = "Sid's working notes"
 
 # Appearance settings
 theme = 'auto'
@@ -19,9 +19,9 @@ colorPalette = 'default'
 hideHeader = false
 
 # Intro on main page, content is markdown
-homeIntroTitle = 'Hey there! I'm Sid.'
+homeIntroTitle = "Hey there! I'm Sid"
 homeIntroContent = """
-Atlantan with restless feet: happiest on trails, coffee shops, and anywhere outdoors
+Atlantan with restless feet: happiest on trails, coffee shops, and anywhere outdoors. 
 """
 
 # Collection to display on home

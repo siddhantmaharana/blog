@@ -2,3 +2,6 @@
 	path = public
 	url = https://github.com/siddhantmaharana/siddhantmaharana.github.io.git
 	branch = main
+[submodule "themes/typo"]
+	path = themes/typo
+	url = https://github.com/tomfran/typo
