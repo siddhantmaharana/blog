@@ -19,10 +19,10 @@ colorPalette = 'default'
 hideHeader = false
 
 # Intro on main page, content is markdown
-homeIntroTitle = "Hey there! I'm Sid"
-homeIntroContent = """
-Atlantan with restless feet: happiest on trails, coffee shops, and anywhere outdoors. 
-"""
+# homeIntroTitle = "Hey there! I'm Sid"
+# homeIntroContent = """
+# I'm based in Atlanta and spend time building stuff, exploring trails, and writing about things I find interesting.
+#   """
 
 # Collection to display on home
 homeCollectionTitle = 'Posts'
@@ -30,7 +30,7 @@ homeCollection = 'posts'
 
 # Lists parameters
 paginationSize = 100
-listSummaries = true
+listSummaries = false
 listDateFormat = '2 Jan 2006'
 
 # Breadcrumbs

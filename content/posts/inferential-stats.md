@@ -3,188 +3,207 @@ date = '2022-04-12T16:24:23-04:00'
 title = 'Notes on Inferential Stats'
 +++
 
-
 # Notes on Inferential Stats
 
-## Introduction
+I keep coming back to these statistical concepts in my work, so I figured I'd write down the key ideas that actually matter in practice. This isn't meant to be comprehensive - just the stuff I find myself explaining over and over.
 
-Statistics is far more than just numbers and calculations. While it does involve mathematical computation, statistics encompasses a comprehensive range of techniques and procedures used for analyzing, interpreting, displaying, and making informed decisions with data.
+## Why Statistics Matters (Beyond the Math)
 
-In our daily lives, we're constantly bombarded with claims, facts, and statistical information. Without a solid understanding of statistical principles, we often struggle to distinguish between sound reasoning and faulty logic, making us vulnerable to manipulation and poor decision-making.
+People think statistics is just crunching numbers, but it's really about making good decisions with incomplete information. Every day we're bombarded with claims backed by "data" - political polls, product reviews, market research. Without understanding the fundamentals, it's hard to tell good analysis from garbage.
 
-There's an old saying: "You can't make a silk purse out of a sow's ear." This wisdom applies perfectly to statistical analysis. Despite computers' remarkable ability to process numbers with incredible speed and accuracy, the quality of output depends entirely on the quality of input. If you feed nonsensical data into a system, you'll get nonsensical results—no matter how sophisticated the analysis appears.
+There's an old saying: "You can't make a silk purse out of a sow's ear." This applies perfectly to data analysis. Computers can process numbers incredibly fast, but if you feed them junk data, you get junk results - even if those results look sophisticated.
 
-This principle is especially critical in our modern computing environment, where many systems operate as "black boxes." Statistical methods are essentially tools for processing information, primarily numerical data. Different statistical procedures make specific assumptions about the data they receive, and when these assumptions are violated, the results become meaningless—though they might still look impressively sophisticated.
+This is especially important now when so many tools work like black boxes. You upload data, click a button, and get impressive-looking charts. But every statistical method makes assumptions about your data, and when those assumptions are wrong, the results are meaningless.
 
-## Descriptive vs. Inferential Statistics
+## Descriptive vs Inferential Stats
 
-### Descriptive Statistics
-Descriptive statistics use numbers to summarize and describe data. While measures like averages, variance, and other descriptive statistics might not provide information for generalizing beyond the immediate dataset, they offer valuable insights into the data at hand.
+**Descriptive statistics** summarize what you have. Mean, median, standard deviation - these tell you about your specific dataset, nothing more.
 
-### Inferential Statistics
-In statistics, we often rely on samples to draw inferences about larger populations. The larger group from which a sample is drawn is called the **population**. Inferential statistics are based on the critical assumption that sampling is random.
+**Inferential statistics** let you make educated guesses about things you haven't directly measured. This is where it gets interesting (and where you can get into trouble).
 
-For example, if we want to draw conclusions about how Americans feel about voting procedure fairness, our sample should ideally represent different segments of society in appropriate proportions. Otherwise, we risk creating a biased sample that reflects only certain population segments.
+The key insight: We usually can't measure everything we care about, so we measure a sample and try to infer something about the larger population. This only works if your sample is representative - which brings us to sampling.
 
-## Sampling Methods
+## Sampling: The Foundation of Everything
 
-The statistical distinction between population and sample is fundamentally the difference between "all" and "some." When we measure all instances of a particular variable, we get a population distribution. When we measure only a limited subset, we get a sample distribution.
+The difference between population and sample is the difference between "all" and "some." When we measure every instance, we get the population distribution. When we measure a subset, we get a sample distribution.
 
-Since populations are often too large or inaccessible to examine completely, we use systematic sampling techniques:
+Since measuring everything is usually impossible or impractical, we need good sampling methods:
 
 ### Simple Random Sampling
-The most straightforward approach, requiring every population member to have an equal chance of selection.
+Every member of the population has an equal chance of being selected. Sounds simple, but it's often harder to implement than you'd think.
 
-### Random Assignment
-When developing truly random procedures is difficult, careful randomization is required. For instance, in testing a new antidepressant's effectiveness, researchers identify a population with some degree of depression, take a random sample, then randomly divide it into treatment and control groups.
+### Stratified Sampling  
+When your population has distinct groups, you sample from each group proportionally. This often gives more representative results than simple random sampling.
 
-### Stratified Sampling
-When populations have distinct groups or strata, stratified sampling works best. This involves identifying sample members from each group, then randomly sampling from each subgroup so that subgroup sizes in the sample are proportional to their sizes in the population.
+### The Randomization Reality Check
+True randomization is hard. If you're testing a new medication, you can't just give it to whoever volunteers - you need to carefully randomize who gets the treatment and who gets the placebo, accounting for age, gender, health status, etc.
 
-## Types of Variables
+## Types of Variables (And Why It Matters)
 
-### Dependent and Independent Variables
-Variables are characteristics of events, objects, or persons that can take different values. In experimental research:
-- **Independent variables** are manipulated by the experimenter
-- **Dependent variables** are measured to determine the effects of manipulation
+Understanding your variables determines which statistical tools you can use:
 
-Example: In comparing four antidepressant drugs' effectiveness, the drug types are independent variables, while depression relief is the dependent variable.
+### Independent vs Dependent Variables
+- **Independent**: What you manipulate or control
+- **Dependent**: What you measure to see the effect
 
-### Quantitative vs. Qualitative Variables
-- **Quantitative variables** can be measured numerically and imply numerical ordering
-- **Qualitative (categorical) variables** have qualitative attributes like color or gender
+In a drug trial, the medication type is independent, the health outcome is dependent.
 
-### Discrete vs. Continuous Variables
-- **Discrete variables** exist in whole units (e.g., number of people—can't have 4.5 people)
-- **Continuous variables** can take any value within a range (e.g., revenue of $45.55)
+### Quantitative vs Qualitative  
+- **Quantitative**: Numbers with meaningful ordering (age, income, test scores)
+- **Qualitative**: Categories (gender, color, yes/no responses)
+
+### Discrete vs Continuous
+- **Discrete**: Whole units only (number of customers, defects per batch)
+- **Continuous**: Any value in a range (revenue of $45.67, temperature of 72.3°F)
+
+This matters because different variable types require different statistical approaches.
 
 ## Levels of Measurement
 
-All measurement fundamentally involves counting, ordering, or sorting:
+This determines how sophisticated your analysis can be:
 
-### Nominal Scale
-Used for categorical responses with names (gender, color, etc.)
+### Nominal
+Just categories with names. You can count them but not order them meaningfully. (Gender, product categories, colors)
 
-### Ordinal Scale
-Allows ordering and comparison of dependent variables
+### Ordinal  
+You can order them, but the differences between levels aren't necessarily equal. (Survey ratings: poor, fair, good, excellent)
 
-### Interval Scale
-Numerical scales where every interval has the same interpretation (e.g., Fahrenheit scale)
+### Interval
+Equal intervals between values, but no true zero point. (Temperature in Fahrenheit - 40°F isn't "twice as hot" as 20°F)
 
-### Ratio Scale
-The most informative scale, with a zero position indicating absence of the measured quantity
+### Ratio
+Equal intervals AND a meaningful zero point. (Revenue, age, height - $100 is twice as much as $50)
+
+Higher levels give you more analytical options. You can calculate means with interval and ratio data, but only modes with nominal data.
 
 ## Measures of Central Tendency
 
-### The Mean
-The arithmetic average of all values, calculated by summing all values and dividing by the number of values. The mean is crucial in analytical statistics because it can be subjected to further mathematical operations.
+### Mean (Average)
+Add everything up, divide by the count. The workhorse of statistics because you can do math with it. But it's sensitive to outliers - one billionaire in your survey can skew the average income dramatically.
 
-### The Median
-The midpoint of all individual measures when arranged in order. For odd numbers of values, it's the middle value; for even numbers, it's the average of the two middle values.
+### Median  
+The middle value when everything's in order. More robust than the mean because outliers don't affect it as much.
 
-### The Mode
-The most frequently occurring value in the distribution.
+### Mode
+The most common value. The only measure of central tendency you can use with nominal data.
 
-### Additional Measures
-- **Trimean**: Weighted average of 25th, 50th, and 75th percentiles
-- **Geometric Mean**: Calculated by multiplying all numbers and taking the nth root
-- **Trimmed Mean**: Computed after removing specified percentages from both ends
+### When to Use Which
+- Normal distribution: Mean, median, and mode are all about the same
+- Skewed distribution: Median often tells a better story than mean
+- Categorical data: Mode is your only option
 
 ## Measures of Variability
 
+Knowing the center isn't enough - you need to know how spread out your data is.
+
 ### Range
-The simplest measure: highest value minus lowest value.
+Highest minus lowest value. Simple but not very informative because it's dominated by extreme values.
 
 ### Interquartile Range (IQR)
-The range of the middle 50% of scores: 75th percentile minus 25th percentile.
+The range of the middle 50% of your data. More robust than the full range.
 
-### Variance and Standard Deviation
-These mathematically useful measures are related: variance = (standard deviation)². The standard deviation is more intuitive as it's expressed in the same units as the original data.
+### Standard Deviation
+This is the big one. It measures the average distance from the mean. For normal distributions:
+- About 68% of data falls within 1 standard deviation of the mean
+- About 95% falls within 2 standard deviations
 
-For normal distributions, approximately 68% of values fall within one standard deviation of the mean, and 95% fall within two standard deviations.
+Standard deviation has the same units as your original data, which makes it intuitive to interpret.
 
-## Distribution Shapes
+### Variance
+Just the standard deviation squared. Less intuitive but mathematically useful in many formulas.
+
+## Distribution Shapes Matter
 
 ### Skewness
-- **Positively skewed**: Tail extends to the right; mean typically larger than median
-- **Negatively skewed**: Tail extends to the left; mean typically smaller than median
+- **Positive skew**: Long tail to the right, mean > median (like income distribution)
+- **Negative skew**: Long tail to the left, mean < median
 
-### Kurtosis
-Describes the distribution's curvature:
-- **Platykurtic**: Relatively flat
-- **Leptokurtic**: Tall and slender
-- **Mesokurtic**: Medium curvature (normal)
+### Kurtosis  
+How peaked or flat your distribution is:
+- **Leptokurtic**: Tall and skinny
+- **Platykurtic**: Short and wide  
+- **Mesokurtic**: Normal amount of peakedness
 
-### Modality
-Refers to the number of peaks:
-- **Unimodal**: One peak
-- **Bimodal**: Two peaks
-- **Multimodal**: Multiple peaks
+### Why This Matters
+Many statistical tests assume normal distributions. When your data is heavily skewed, those tests can give misleading results.
 
-## Working with Bivariate Data
+## Working with Two Variables
 
 ### Correlation
-Pearson's correlation coefficient (r) measures linear relationship strength between two variables, ranging from -1 to +1:
+Pearson's correlation coefficient (r) measures linear relationships between two variables:
+- r = 1: Perfect positive relationship
+- r = 0: No linear relationship
 - r = -1: Perfect negative relationship
-- r = 0: No linear relationship  
-- r = +1: Perfect positive relationship
 
-The formula is: r = Σxy / √(Σx²Σy²)
+The formula: r = Σxy / √(Σx²Σy²)
 
-## Probability Fundamentals
+### The Correlation Reality Check
+Correlation doesn't imply causation. Period. Just because two things move together doesn't mean one causes the other. There might be:
+- A third variable affecting both
+- Reverse causation (B causes A, not A causes B)  
+- Pure coincidence
+
+## Probability: The Language of Uncertainty
 
 ### Basic Probability
-**Frequentist definition**: Number of favorable outcomes divided by total number of equally likely outcomes.
+**Frequentist approach**: Probability = (favorable outcomes) / (total possible outcomes)
+
+This works for things like dice and cards where you know all possible outcomes.
 
 ### Key Rules
 - **Independent events**: P(A and B) = P(A) × P(B)
-- **Either/or probability**: P(A or B) = P(A) + P(B) - P(A and B)
-- **Conditional probability**: P(A and B) = P(A) × P(B|A)
+- **Either/or**: P(A or B) = P(A) + P(B) - P(A and B)
+- **Conditional**: P(A|B) = P(A and B) / P(B)
 
 ### Counting Methods
-- **Permutations**: nPr = n!/(n-r)! (order matters)
-- **Combinations**: nCr = n!/[(n-r)!r!] (order doesn't matter)
+When you need to figure out how many ways something can happen:
+- **Permutations**: Order matters. nPr = n!/(n-r)!
+- **Combinations**: Order doesn't matter. nCr = n!/[(n-r)!r!]
 
 ## Important Probability Distributions
 
 ### Normal Distribution
-- Symmetric around the mean
-- Mean, median, and mode are equal
-- Defined by mean and standard deviation
-- 68% of data within 1 SD, 95% within 2 SD
-- Standard normal: mean = 0, SD = 1
+The famous bell curve. Symmetric around the mean, with most data near the center and fewer observations at the extremes. Defined completely by its mean and standard deviation.
 
-### Binomial Distribution
-For situations with two possible outcomes:
-- Mean: μ = Nπ
+Why it's everywhere: The Central Limit Theorem says that averages of samples tend to be normally distributed, even if the underlying data isn't.
+
+### Binomial Distribution  
+For yes/no, success/failure type situations with a fixed number of trials. Like counting how many heads you get in 10 coin flips.
+- Mean: μ = Nπ (N trials, π probability of success)
 - Variance: σ² = Nπ(1-π)
-- Used for fixed number of independent trials
 
 ### Poisson Distribution
-For counting events in fixed intervals:
-- Mean and variance both equal λ
-- Used when events are random and independent
+For counting events in fixed time periods when those events are rare and random. Customer service calls per hour, defects per batch, accidents per day.
+- Mean and variance are both equal to λ (the rate parameter)
 
-### Other Distributions
-- **Multinomial**: More than two possible outcomes
-- **Hypergeometric**: Sampling without replacement
+## Bayes' Theorem: Updating Your Beliefs
 
-## Bayes' Theorem
-
-Essential for updating probabilities with new information:
+This is one of the most practical concepts in all of statistics:
 
 P(D|T) = [P(T|D) × P(D)] / [P(T|D) × P(D) + P(T|D') × P(D')]
 
-This is particularly important in medical testing, where we need to consider base rates when interpreting test results.
+In plain English: The probability of having a disease given a positive test equals:
+(Test accuracy × Disease prevalence) / (Overall probability of testing positive)
+
+### Why This Matters
+Medical tests, fraud detection, spam filters - all these rely on Bayes' theorem. The key insight: Even with a very accurate test, if the thing you're testing for is rare, most positive results will be false positives.
+
+Example: A cancer test that's 95% accurate sounds great, but if only 1% of people have the cancer, then most positive tests are still wrong.
 
 ## Key Takeaways
 
-Understanding statistics requires grasping both the mathematical foundations and the conceptual framework. The most important principles are:
+1. **Quality matters more than quantity**: Better to have good data from a smaller sample than lots of bad data
 
-1. **Garbage in, garbage out**: Quality of analysis depends on data quality
-2. **Sampling matters**: Random, representative sampling is crucial for valid inferences
-3. **Choose appropriate measures**: Different situations require different statistical tools
-4. **Consider assumptions**: Every statistical method has underlying assumptions
-5. **Context is crucial**: Statistical significance doesn't always mean practical importance
+2. **Understand your assumptions**: Every statistical method assumes something about your data. Know what those assumptions are.
 
-Statistics is a powerful tool for understanding our world, but it requires careful application and interpretation. By mastering these fundamentals, you'll be better equipped to analyze data, make informed decisions, and critically evaluate statistical claims you encounter daily.
+3. **Context is everything**: Statistical significance doesn't always mean practical importance
+
+4. **Correlation ≠ causation**: This bears repeating. Just because things are related doesn't mean one causes the other.
+
+5. **Sampling is crucial**: Your results are only as good as your sample. Biased sampling leads to biased conclusions.
+
+6. **Check the shape of your data**: Many methods assume normal distributions. If your data is heavily skewed, you might need different approaches.
+
+7. **Think in probabilities**: Very few things are certain. Statistics helps you quantify and work with uncertainty.
+
+The goal isn't to memorize formulas (that's what computers are for), but to understand the concepts well enough to ask the right questions and interpret results sensibly. Good statistical thinking is about being appropriately skeptical and knowing the limitations of your analysis.
