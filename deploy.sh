@@ -29,7 +29,7 @@ if git diff --staged --quiet; then
     echo "ℹ️  No source changes to commit"
 else
     git commit -m "Source update $(date '+%Y-%m-%d %H:%M:%S')"
-    git push origin main
+    git push origin master
     echo "✅ Source repository updated"
 fi
 
