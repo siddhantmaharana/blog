@@ -1,6 +1,7 @@
 +++
 date = '2024-12-28T16:24:23-04:00'
 title = 'AB Testing Fundamentals'
+tags = ["experimentation","statistics"]
 +++
 
 I've been running A/B tests for a while now, and I keep coming back to these fundamental concepts. Writing them down helps me think through them more clearly - maybe they'll be useful for you too.
