@@ -19,10 +19,10 @@ colorPalette = 'default'
 hideHeader = false
 
 # Intro on main page, content is markdown
-# homeIntroTitle = "Hey there! I'm Sid"
-# homeIntroContent = """
-# I'm based in Atlanta and spend time building stuff, exploring trails, and writing about things I find interesting.
-#   """
+homeIntroTitle = "Thinking out loud"
+homeIntroContent = """
+Working thoughts on experimentation, statistics, and making sense of the world.
+"""
 
 # Collection to display on home
 homeCollectionTitle = 'Posts'
