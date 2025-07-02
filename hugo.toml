@@ -19,7 +19,7 @@ colorPalette = 'default'
 hideHeader = false
 
 # Intro on main page, content is markdown
-homeIntroTitle = "Thinking out loud"
+homeIntroTitle = ""
 homeIntroContent = """
 Working thoughts on experimentation, statistics, and making sense of the world.
 """
