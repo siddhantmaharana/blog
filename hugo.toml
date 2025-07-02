@@ -25,8 +25,9 @@ Working thoughts on experimentation, statistics, and making sense of the world.
 """
 
 # Collection to display on home
-homeCollectionTitle = 'Posts'
+homeCollectionTitle = 'Recent Notes'
 homeCollection = 'posts'
+homeCollectionLimit = 5
 
 # Lists parameters
 paginationSize = 100
