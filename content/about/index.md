@@ -11,3 +11,5 @@ Beyond the world of data and p-values, you'll find me running Atlanta's streets 
 
 - [LinkedIn](https://www.linkedin.com/in/siddhantmaharana/)
 - [GitHub](https://github.com/siddhantmaharana)
+- [Flickr](https://www.flickr.com/photos/siddhantmaharana/)
+- [Strava](https://www.strava.com/athletes/16406037)
