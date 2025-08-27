@@ -1,5 +1,5 @@
 +++
-date = '2024-12-28T16:24:23-04:00'
+date = '2022-12-28T16:24:23-04:00'
 title = 'AB Testing Fundamentals'
 tags = ["experimentation","statistics"]
 +++

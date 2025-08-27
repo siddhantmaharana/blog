@@ -1,5 +1,5 @@
 +++
-date = '2022-04-12T16:24:23-04:00'
+date = '2021-04-12T16:24:23-04:00'
 title = 'Notes on Inferential Stats'
 +++
 
